@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
+
+  const handleGetLecitte = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className="flex py-24 items-center font-sans">
       <div className="flex flex-col w-1/2 gap-8">
@@ -23,7 +30,10 @@ function Hero() {
           Get instant transcriptions and translations for your videos, making
           them accessible to a global audience effortlessly.
         </h2>
-        <button className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-fit flex items-center gap-2">
+        <button
+          className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg w-fit flex items-center gap-2"
+          onClick={handleGetLecitte}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
